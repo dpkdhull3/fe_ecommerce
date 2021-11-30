@@ -1,0 +1,8 @@
+
+
+<p>{{category.categoryName}}</p>
+<p>Description: {{category.categoryDescription}}</p>
+<div class="child-holder">
+    <app-category *ngFor="let cat of category?.childCategories" [category]="cat"></app-category>
+</div>
+

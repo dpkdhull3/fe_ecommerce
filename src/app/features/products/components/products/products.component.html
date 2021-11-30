@@ -1,0 +1,13 @@
+<input type="text" [(ngModel)]="searchTerm" (keyup.enter)="search()"/>
+<button (keyup.enter)="search()" (click)="search()">Search</button>
+<button (click)="addProducts()">Add New Products</button>
+<div class="row m30">
+  <ng-container *ngFor="let product of products">
+    <div class="col-md-2" *ngIf="product.productImage[0]">
+      <app-product [product]="product"></app-product>
+    </div>
+    
+  </ng-container>
+  
+</div>
+

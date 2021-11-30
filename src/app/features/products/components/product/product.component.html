@@ -1,0 +1,27 @@
+<div class="product-holder">
+  <ng-image-slider #nav
+  [images]="imagesForSlider"
+  [infinite]="false"
+  [autoSlide]="{interval: 1, stopOnHover: false}"
+  [imageSize]="{width: '100%', height: 200}"
+  slideImage="1"
+  [showArrow]="true"
+  [manageImageRatio]="false"
+  [lazyLoading]="true"
+  ></ng-image-slider>
+
+  <div class="product-metadata">
+  
+    <div class="product-name">{{ product.productName }}</div>
+    
+    <div>{{ product.productDescription }}</div>
+    <div>Rs. {{ product.price - product.price*(product.discountPercentage || 10)/100 }} ({{product.discountPercentage || 10}}% off)</div>
+    
+    <div class="clearfix"></div>
+    <button>Add to cart</button>
+    
+  </div>
+</div>
+
+
+
